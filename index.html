@@ -1,0 +1,29 @@
+<head>
+  <link href='css/index.css' rel='stylesheet' type='text/css'>
+
+  <!-- Vendor. -->
+  <script src='vendor/jquery.js'></script>
+  <script src='vendor/underscore.js'></script>
+  <script src='vendor/backbone.js'></script>
+  <script src='vendor/marked.js'></script>
+
+  <!-- Application. -->
+
+  <!-- Views. -->
+  <script src='views/main.js'></script>
+  <script src='views/sidebar.js'></script>
+
+  <!-- Router. -->
+  <script src='router.js'></script>
+</head>
+<script id='js-sidebar-template' type='text/template'>
+  <div class='repo-search'>
+    <form class='form-search js-repo-search-form'>
+      <label for='js-repo-search-input'>Find a user or user/repo</label>
+      <input type='text' placeholder='documentcloud/backbone' id='js-repo-search-input'>
+    </form>
+    <div id='js-message' class='alert empty'></div>
+    <div class='well empty' id='js-repo-search-list'></div>
+  </div>
+  <!-- filter view will be injected here -->
+</script>
