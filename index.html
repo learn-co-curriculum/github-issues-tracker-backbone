@@ -1,6 +1,24 @@
 <head>
   <link href='css/index.css' rel='stylesheet' type='text/css'>
 
+</head>
+<body>
+  <div id="app-container"></div>
+</body>
+<footer>
+<!-- templates -->
+  <script id='js-sidebar-template' type='text/template'>
+    <div class='repo-search'>
+      <form class='form-search js-repo-search-form'>
+        <label for='js-repo-search-input'>Find a user or user/repo</label>
+        <input type='text' placeholder='documentcloud/backbone' id='js-repo-search-input'>
+      </form>
+      <div id='js-message' class='alert empty'></div>
+      <div class='well empty' id='js-repo-search-list'></div>
+    </div>
+    <!-- filter view will be injected here -->
+  </script>
+
   <!-- Vendor. -->
   <script src='vendor/jquery.js'></script>
   <script src='vendor/underscore.js'></script>
@@ -8,22 +26,16 @@
   <script src='vendor/marked.js'></script>
 
   <!-- Application. -->
+  <script src='app.js'></script>
 
   <!-- Views. -->
-  <script src='views/main.js'></script>
   <script src='views/sidebar.js'></script>
+  <script src='views/main.js'></script>
 
   <!-- Router. -->
   <script src='router.js'></script>
-</head>
-<script id='js-sidebar-template' type='text/template'>
-  <div class='repo-search'>
-    <form class='form-search js-repo-search-form'>
-      <label for='js-repo-search-input'>Find a user or user/repo</label>
-      <input type='text' placeholder='documentcloud/backbone' id='js-repo-search-input'>
-    </form>
-    <div id='js-message' class='alert empty'></div>
-    <div class='well empty' id='js-repo-search-list'></div>
-  </div>
-  <!-- filter view will be injected here -->
-</script>
+<!-- run -->
+  <script src='run.js'></script>
+
+
+</footer>
