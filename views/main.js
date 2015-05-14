@@ -15,7 +15,7 @@
     initialize: function() {
     },
     render: function() {
-      var sidebar = new app.SideBar();
+      var sidebar = this.sidebar = new app.SideBar();
       this.$el.append(sidebar.$el)
       $("#app-container").append(this.$el)
       return this

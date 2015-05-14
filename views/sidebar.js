@@ -16,8 +16,11 @@
       this.$el.append(this.template())
       return this
     },
-    search: function() {
-      alert("hello")
+    search: function(e) {
+      e.preventDefault();
+      var repos = app.Repos.withOwner("blake41");
+      repos.fetch();
+      this.repos = repos;
     }
 
   });
