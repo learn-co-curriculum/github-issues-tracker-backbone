@@ -2,7 +2,7 @@
   app.SideBar = Backbone.View.extend({
 
     events: {
-
+      "submit" : "search"
     },
 
     initialize: function() {
@@ -15,6 +15,9 @@
     render: function() {
       this.$el.append(this.template())
       return this
+    },
+    search: function() {
+      alert("hello")
     }
 
   });
