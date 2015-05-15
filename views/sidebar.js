@@ -22,8 +22,11 @@
       e.preventDefault();
       var user = $("#js-repo-search-input").val()
       var repos = app.Repos.withOwner(user);
-      repos.fetch();
-      this.repos = repos;
+      repos.fetch().done(function() {
+        var searchResults = new app.SearchResults({collection: repos});
+        searchResults.render();
+        $("#sidebar").append(searchResults.$el)
+      });
     }
 
   });

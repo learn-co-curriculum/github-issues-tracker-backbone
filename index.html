@@ -19,6 +19,17 @@
     <!-- filter view will be injected here -->
   </script>
 
+  <script type="text/template" id="searchResultTemplate">
+    <ul>
+    <% debugger %>
+      <% _.each( repos.models, function( repo ){ %>
+        <li>
+          <%- repo.get("name") %>
+        </li>
+      <% }); %>
+    </ul>
+  </script>
+
   <!-- Vendor. -->
   <script src='vendor/jquery.js'></script>
   <script src='vendor/underscore.js'></script>
@@ -35,6 +46,7 @@
   <script src='collections/repos.js'></script>
 
   <!-- Views. -->
+  <script src='views/searchResults.js'></script>
   <script src='views/sidebar.js'></script>
   <script src='views/main.js'></script>
 
