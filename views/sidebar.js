@@ -1,6 +1,8 @@
 (function() {
   app.SideBar = Backbone.View.extend({
 
+    id: "sidebar",
+
     events: {
       "submit" : "search"
     },
@@ -18,7 +20,8 @@
     },
     search: function(e) {
       e.preventDefault();
-      var repos = app.Repos.withOwner("blake41");
+      var user = $("#js-repo-search-input").val()
+      var repos = app.Repos.withOwner(user);
       repos.fetch();
       this.repos = repos;
     }
